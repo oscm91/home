@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "types": []
+  },
+  "include": ["**/*.ts", "src/lib/reducers/workerReducer.js"],
+  "exclude": ["**/*.spec.ts", "**/*.test.ts", "jest.config.ts"]
+}
