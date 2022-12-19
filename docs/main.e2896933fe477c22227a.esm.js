@@ -2477,7 +2477,7 @@
                           a.a.createElement(
                             'span',
                             { className: 'text-grisclaro' },
-                            'Deducción Bold'
+                            'Deducción'
                           ),
                           a.a.createElement(
                             'span',

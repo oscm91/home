@@ -1,10 +1,8 @@
 import React, { useCallback } from 'react';
 import {
   HomeSolid,
-  PepperHotSolid,
-  PizzaSliceSolid,
+  InfoImage,
   SignOutAltSolid,
-  ToolsSolid,
 } from '../images';
 import { Card } from '../card';
 import { Menu, MenuItem } from '../menu';
@@ -51,7 +49,7 @@ export function Home({ facade, history }: HomeProps) {
         style={{ height: 'max-content' }}
       >
         <main className="flex-col flex-grow px-4 pt-10">
-          <h2 className="font-bold text-lg text-primary pb-14">
+          <h2 className="bg-clip-text text-transparent bg-primary text-4xl font-bold border-b border-grisclaro pb-4">
             Landing Home
           </h2>
           <div className='pb-8'>
@@ -95,7 +93,7 @@ export function Home({ facade, history }: HomeProps) {
                     key={keyValue + i}
                     onClick={() => {}}
                   >
-                    <PizzaSliceSolid />
+                    <InfoImage />
                     <p>
                       {title}:
                       <br />

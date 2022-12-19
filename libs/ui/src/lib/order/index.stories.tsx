@@ -1,6 +1,6 @@
 import React from 'react';
 import { Order, OrderProps, OrderItem } from './index';
-import { PizzaSliceSolid } from '../images';
+import { HomeSolid } from '../images';
 
 export default {
   component: Order,
@@ -18,9 +18,9 @@ export const order = () => {
             console.log('ingredient 1');
           }}
         >
-          <PizzaSliceSolid />
+          <HomeSolid />
           <p>
-            Base Pizza Italiana{' '}
+            Baño{' '}
             <span className="text-secondary block text-xs">x 1</span>
           </p>
         </OrderItem>
@@ -29,9 +29,9 @@ export const order = () => {
             console.log('ingredient 2');
           }}
         >
-          <PizzaSliceSolid />
+          <HomeSolid />
           <p>
-            Base Pizza Italiana{' '}
+            Baño{' '}
             <span className="text-secondary block text-xs">x 1</span>
           </p>
         </OrderItem>
@@ -40,9 +40,9 @@ export const order = () => {
             console.log('ingredient 3');
           }}
         >
-          <PizzaSliceSolid />
+          <HomeSolid />
           <p>
-            Base Pizza Italiana{' '}
+            Baño{' '}
             <span className="text-secondary block text-xs">x 1</span>
           </p>
         </OrderItem>
@@ -51,9 +51,9 @@ export const order = () => {
             console.log('ingredient 4');
           }}
         >
-          <PizzaSliceSolid />
+          <HomeSolid />
           <p>
-            Base Pizza Italiana{' '}
+            Baño{' '}
             <span className="text-secondary block text-xs">x 1</span>
           </p>
         </OrderItem>
@@ -62,9 +62,9 @@ export const order = () => {
             console.log('ingredient 5');
           }}
         >
-          <PizzaSliceSolid />
+          <HomeSolid />
           <p>
-            Base Pizza Italiana{' '}
+            Baño{' '}
             <span className="text-secondary block text-xs">x 1</span>
           </p>
         </OrderItem>
@@ -73,9 +73,9 @@ export const order = () => {
             console.log('ingredient 6');
           }}
         >
-          <PizzaSliceSolid />
+          <HomeSolid />
           <p>
-            Base Pizza Italiana{' '}
+            Baño{' '}
             <span className="text-secondary block text-xs">x 1</span>
           </p>
         </OrderItem>
@@ -84,9 +84,9 @@ export const order = () => {
             console.log('ingredient 7');
           }}
         >
-          <PizzaSliceSolid />
+          <HomeSolid />
           <p>
-            Base Pizza Italiana{' '}
+            Baño{' '}
             <span className="text-secondary block text-xs">x 1</span>
           </p>
         </OrderItem>
@@ -95,9 +95,9 @@ export const order = () => {
             console.log('ingredient 8');
           }}
         >
-          <PizzaSliceSolid />
+          <HomeSolid />
           <p>
-            Base Pizza Italiana{' '}
+            Baño{' '}
             <span className="text-secondary block text-xs">x 1</span>
           </p>
         </OrderItem>
@@ -106,9 +106,9 @@ export const order = () => {
             console.log('ingredient 9');
           }}
         >
-          <PizzaSliceSolid />
+          <HomeSolid />
           <p>
-            Base Pizza Italiana{' '}
+            Baño{' '}
             <span className="text-secondary block text-xs">x 1</span>
           </p>
         </OrderItem>

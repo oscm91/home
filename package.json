@@ -28,7 +28,7 @@
     "storybook": "nx run ui:storybook",
     "storybook:build": "nx run ui:build-storybook",
     "chromatic": "npx chromatic --project-token=dea96f0485b8 --storybook-build-dir=dist/storybook/ui --output-dir=dist/chromatic/ui",
-    "predeploy": "yarn build --prod --baseHref=pizza",
+    "predeploy": "yarn build --prod --baseHref=home",
     "deploy": "gh-pages -d dist/apps/stepform",
     "stryker": "cd ./libs/store && npx stryker run",
     "devtools:cucumber:report": "node ./tools/generate-cucumber-report.js"

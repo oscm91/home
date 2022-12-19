@@ -10,8 +10,6 @@ import { ReactComponent as BellRegular } from './bell-regular.svg';
 import { ReactComponent as ColumnsSolid } from './columns-solid.svg';
 import { ReactComponent as HomeSolid } from './home-solid.svg';
 import { ReactComponent as MoneyCheckAltSolid } from './money-check-alt-solid.svg';
-import { ReactComponent as PepperHotSolid } from './pepper-hot-solid.svg';
-import { ReactComponent as PizzaSliceSolid } from './pizza-slice-solid.svg';
 import { ReactComponent as PlusSolid } from './plus-solid.svg';
 import { ReactComponent as SearchSolid } from './search-solid.svg';
 import { ReactComponent as SignOutAltSolid } from './sign-out-alt-solid.svg';
@@ -30,8 +28,6 @@ export {
   ColumnsSolid,
   HomeSolid,
   MoneyCheckAltSolid,
-  PepperHotSolid,
-  PizzaSliceSolid,
   PlusSolid,
   SearchSolid,
   SignOutAltSolid,

@@ -57,7 +57,6 @@ export function FormBuilder ({
   };
 
   const onSubmit = (values, { setSubmitting, resetForm, setStatus }) => {
-    console.log(values);
     setSubmitting(false);
   };
 

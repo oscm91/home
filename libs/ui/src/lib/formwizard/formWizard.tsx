@@ -15,13 +15,12 @@ export function FormWizard({ facade }: FormWizardProps) {
 
   return (
     <>
-      <h2 className="bg-clip-text text-transparent bg-primary text-4xl font-bold border-b border-grisclaro">
+      <h2 className="font-bold text-2xl text-primary">
         {stepSchema.sectionTitle}
       </h2>
       <br />
       <FormBuilder formSchema={stepSchema.formSchema} formData={formData}>
         {({ isValid, values }) => {
-          console.log({ isValid, values });
           return (
             <>
               {facade.isFirstStep ? (

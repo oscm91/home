@@ -1,5 +1,5 @@
 import React from 'react';
-import { LogoImage } from '../images';
+import { HomeSolid } from '../images';
 
 export interface LogoProps {
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
@@ -8,7 +8,7 @@ export interface LogoProps {
 export function Logo({ onClick }: LogoProps) {
   return (
     <span onClick={onClick}>
-      <LogoImage />
+      <HomeSolid />
     </span>
   );
 }
