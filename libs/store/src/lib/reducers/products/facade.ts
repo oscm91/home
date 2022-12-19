@@ -12,10 +12,10 @@ export default () => {
   const params = useParams();
   const navigate = useNavigate();
 
-  const { wizard, schema } = products;
+  const { wizard, schema = [] } = products;
 
   const stepName = params?.step || schema[0].name;
-  const stepNumber = schema.find((stepSchema => stepSchema.name === stepName)).index;
+  const stepNumber = schema && schema.length ? schema.find((stepSchema => stepSchema.name === stepName))?.index : 0;
   
 
   return {
