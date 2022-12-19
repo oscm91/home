@@ -56,6 +56,7 @@ export function Home({ facade, history }: HomeProps) {
             <Tabs>
               {schema.map((stepSchema) => {
                 return <span
+                  key={stepSchema.name}
                   className={`${wizard.values[stepSchema.name] ? 'bg-green' : 'bg-gray'}`}
                   data-active={wizard.stepNumber === stepSchema.index}
                   data-selectable={!!Object.keys(wizard.values).some(val=> Object.keys(stepSchema.formSchema).includes(val))}
@@ -98,7 +99,7 @@ export function Home({ facade, history }: HomeProps) {
                       {title}:
                       <br />
                     </p>
-                    <p>{wizard.values[keyValue]}</p>
+                    <p>{JSON.stringify(wizard.values[keyValue])}</p>
                   </OrderItem>
                 );
               })}

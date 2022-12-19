@@ -77,8 +77,8 @@ export function SelectField(props) {
                 id={name}
                 name={name}
             >
-                <option value="" >Choose...</option>
-                {options.map((optn, index) => <option value={optn.value} label={optn.label || optn.value} />)}
+                <option value="" ></option>
+                {options.map((optn, index) => <option key={optn.value} value={optn.value} label={optn.label || optn.value} />)}
             </Field>
             <ErrorMessage name={name} render={msg => <div style={{ color: 'red' }} >{msg}</div>} />
         </>
@@ -112,13 +112,26 @@ export function CheckboxField(props) {
     );
   }
 
+  function getBase64(file) {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+      console.log(reader.result);
+    };
+    reader.onerror = function (error) {
+      console.log('Error: ', error);
+    };
+ }
+
   export function ImageField(props) {
     const { name, label, accept } = props;
     const [field, meta, helpers] = useField(name);
   
     const handleChange = (event) => {
       const selectedFile = event.currentTarget.files[0];
-      helpers.setValue(selectedFile);
+      console.log({selectedFile : getBase64(selectedFile)});
+      
+      helpers.setValue(selectedFile.name);
     };
   
     return (
