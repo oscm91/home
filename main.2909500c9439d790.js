@@ -158,16 +158,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+  var _schema$find;
+
   const products = (0,react_redux__WEBPACK_IMPORTED_MODULE_0__.useSelector)(state => state['products']);
   const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_0__.useDispatch)();
   const params = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_1__.useParams)();
   const navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_1__.useNavigate)();
   const {
     wizard,
-    schema
+    schema = []
   } = products;
   const stepName = (params == null ? void 0 : params.step) || schema[0].name;
-  const stepNumber = schema.find(stepSchema => stepSchema.name === stepName).index;
+  const stepNumber = schema && schema.length ? (_schema$find = schema.find(stepSchema => stepSchema.name === stepName)) == null ? void 0 : _schema$find.index : 0;
   return {
     getState: () => products,
     getData: () => wizard.values,
