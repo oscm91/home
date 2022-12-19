@@ -32,12 +32,12 @@ export function OrderItem({ children, ...props }: OrderItemProps) {
       className="relative flex flex-row items-center px-10 space-x-2 text-center whitespace-nowrap rounded-xl cursor-pointer text-secondary text-md w-full"
     >
       <span className="p-6 rounded-lg bg-secondary">{Icon}</span>
+      <div>
       <div className="flex items-center text-left">{Text}</div>
       <div className="flex items-center whitespace-nowrap text-left">
-        <span className="flex text-primary block text-xs">$&nbsp;</span>
         <span className="text-secondary block text-xs"> {Price}</span>
       </div>
-      <CloseImage width="20px" />
+      </div>
     </div>
   );
 }

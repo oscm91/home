@@ -35,15 +35,16 @@ export function FormBuilder ({
       ],
     },
   },
+  formData,
   children
 }: {
   formSchema: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [key:string]: any;
   },
-  children: any;
+  formData: {[key:string]: any;};
+  children?: any;
 }) {
-  const [formData, setFormData] = useState({});
   const [validationSchema, setValidationSchema] = useState({}) as any;
 
   useEffect(() => {
@@ -51,8 +52,7 @@ export function FormBuilder ({
   }, [formSchema]);
 
   const initForm = (formSchema) => {
-    const { formData, validationSchema } = configForm(formSchema)
-    setFormData(formData);
+    const { validationSchema } = configForm(formSchema)
     setValidationSchema(Yup.object().shape({ ...validationSchema }));
   };
 
@@ -79,7 +79,7 @@ export function FormBuilder ({
         onSubmit={onSubmit}
       >
         {Object.keys(formSchema).map((key, ind) => (
-          <div key={key}>{getFormElement(key, formSchema[key])}</div>
+          <div key={key} className="flex justify-between items-center mb-4">{getFormElement(key, formSchema[key])}</div>
         ))}
         <FormNavComp formProps={{}}></FormNavComp>
       </Form>

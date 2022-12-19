@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
 
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans Bold', sans-serif;
 }
 
 /*! tailwindcss v2.2.4 | MIT License | https://tailwindcss.com */
@@ -465,11 +465,6 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   color: #9ca3af;
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  opacity: 1;
-  color: #9ca3af;
-}
-
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
@@ -621,6 +616,40 @@ video {
   --tw-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+.container{
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
+
 .absolute{
   position: absolute;
 }
@@ -657,12 +686,12 @@ video {
   margin-top: 1rem;
 }
 
-.mt-8{
-  margin-top: 2rem;
-}
-
 .mb-4{
   margin-bottom: 1rem;
+}
+
+.mt-8{
+  margin-top: 2rem;
 }
 
 .mb-2{
@@ -671,6 +700,10 @@ video {
 
 .block{
   display: block;
+}
+
+.inline{
+  display: inline;
 }
 
 .flex{
@@ -710,7 +743,6 @@ video {
 }
 
 .w-max{
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
@@ -773,6 +805,10 @@ video {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
+.grid-cols-4{
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .flex-row{
   flex-direction: row;
 }
@@ -783,10 +819,6 @@ video {
 
 .items-center{
   align-items: center;
-}
-
-.justify-start{
-  justify-content: flex-start;
 }
 
 .justify-end{
@@ -913,7 +945,7 @@ video {
 
 .border-primary{
   --tw-border-opacity: 1;
-  border-color: rgba(251, 148, 0, var(--tw-border-opacity));
+  border-color: rgba(150, 52, 255, var(--tw-border-opacity));
 }
 
 .border-grisclaro{
@@ -933,7 +965,7 @@ video {
 
 .bg-primary{
   --tw-bg-opacity: 1;
-  background-color: rgba(251, 148, 0, var(--tw-bg-opacity));
+  background-color: rgba(150, 52, 255, var(--tw-bg-opacity));
 }
 
 .bg-white{
@@ -1042,6 +1074,10 @@ video {
   padding-bottom: 0.25rem;
 }
 
+.pl-4{
+  padding-left: 1rem;
+}
+
 .pt-8{
   padding-top: 2rem;
 }
@@ -1056,6 +1092,10 @@ video {
 
 .pt-10{
   padding-top: 2.5rem;
+}
+
+.pb-14{
+  padding-bottom: 3.5rem;
 }
 
 .pb-8{
@@ -1103,7 +1143,7 @@ video {
 
 .text-primary{
   --tw-text-opacity: 1;
-  color: rgba(251, 148, 0, var(--tw-text-opacity));
+  color: rgba(150, 52, 255, var(--tw-text-opacity));
 }
 
 .text-white{
@@ -1156,7 +1196,7 @@ video {
 
 .hover\:bg-primary:hover{
   --tw-bg-opacity: 1;
-  background-color: rgba(251, 148, 0, var(--tw-bg-opacity));
+  background-color: rgba(150, 52, 255, var(--tw-bg-opacity));
 }
 
 .hover\:bg-grisclaro:hover{
@@ -1199,5 +1239,5 @@ video {
 
 .group:hover .group-hover\:text-primary{
   --tw-text-opacity: 1;
-  color: rgba(251, 148, 0, var(--tw-text-opacity));
+  color: rgba(150, 52, 255, var(--tw-text-opacity));
 }

@@ -19,7 +19,7 @@ module.exports = {
       '2xl': '1536px',
     },
     colors: {
-      primary: '#FB9400',
+      primary: '#9634ff',
       secondary: '#74757C',
       background: '#FFE3B8',
       backcontent: '#F9F9FB',
@@ -38,7 +38,7 @@ module.exports = {
       gray: colors.coolGray,
       red: colors.red,
       yellow: colors.amber,
-      green: colors.emerald,
+      green: '#00c29c',
       blue: colors.blue,
       indigo: colors.indigo,
       purple: colors.violet,

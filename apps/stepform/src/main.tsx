@@ -7,7 +7,6 @@ import { load } from 'redux-localstorage-simple';
 import { createRoot } from 'react-dom/client';
 
 import Home from './app/home';
-import Dashboard from './app/dashboard';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const store: Store<any, any> = getStore(load());
@@ -21,8 +20,8 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/" element={<Home />} />
+          <Route index path="/" element={<Home />} />
+          <Route path="/:step" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </Provider>

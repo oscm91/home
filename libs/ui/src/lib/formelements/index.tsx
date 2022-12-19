@@ -34,9 +34,9 @@ export function TextField(props) {
     const { name, label, placeholder, ...rest } = props
     return (
         <>
-            {label && <label htmlFor={name}>{label}</label>}
+            {label && <label htmlFor={name} className="font-bold text-lg text-secondary cursor-pointer">{label}</label>}
             <Field
-                className="form-control"
+                className="form-control py-2 px-14 font-bold text-secondary rounded-full border-2 border-primary bg-white hover:opacity-20 focus:opacity-100 focus:outline-none"
                 type="text"
                 name={name}
                 id={name}
@@ -52,9 +52,9 @@ export function NumberField(props) {
     const { name, label, placeholder, ...rest } = props
     return (
         <>
-            {label && <label htmlFor={name}>{label}</label>}
+            {label && <label htmlFor={name} className="font-bold text-lg text-secondary cursor-pointer">{label}</label>}
             <Field
-                className="form-control"
+                className="form-control py-2 px-14 font-bold text-secondary rounded-full border-2 border-primary bg-white hover:opacity-20 focus:opacity-100 focus:outline-none"
                 type="number"
                 name={name}
                 id={name}
@@ -70,8 +70,9 @@ export function SelectField(props) {
     const { name, label, options } = props
     return (
         <>
-            {label && <label htmlFor={name}>{label}</label>}
+            {label && <label htmlFor={name} className="font-bold text-lg text-secondary cursor-pointer">{label}</label>}
             <Field
+                className="form-control py-2 px-14 font-bold text-secondary rounded-full border-2 border-primary bg-white hover:opacity-20 focus:opacity-100 focus:outline-none"
                 as="select"
                 id={name}
                 name={name}
@@ -99,8 +100,8 @@ export function CheckboxField(props) {
     return (
       <>
         <label className="form-check-label" htmlFor={name}>
-          <input className="form-check-input" {...field} {...props} />
-          {label}
+          <input id={name} className="form-check-input" type="checkbox" {...field} {...props} />
+          <p className='pl-4 inline'>{label}</p>
         </label>
         {meta.touched && meta.error ? (
           <div className="error" style={{ color: "red" }}>
@@ -122,14 +123,14 @@ export function CheckboxField(props) {
   
     return (
       <>
-        {label && <label htmlFor={name}>{label}</label>}
+        {label && <label htmlFor={name} className="font-bold text-lg text-secondary cursor-pointer">{label}</label>}
         <input
+          className="form-control py-2 px-14 font-bold text-secondary rounded-full border-2 border-primary bg-white hover:opacity-20 focus:opacity-100 focus:outline-none"
           type="file"
           name={name}
           id={name}
           accept={accept}
           onChange={handleChange}
-          {...field}
         />
         {meta.touched && meta.error ? (
           <div className="error" style={{ color: "red" }}>

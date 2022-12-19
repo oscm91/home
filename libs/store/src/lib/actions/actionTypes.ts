@@ -14,3 +14,8 @@ export const PRODUCTS_REMOVE_MASS = '@@PRODUCTS/REMOVE/MASS';
 export const PRODUCTS_SET_NAME = '@@PRODUCTS/SET/NAME';
 export const PRODUCTS_UPDATE = '@@PRODUCTS/UPDATE';
 export const PRODUCTS_SAVE = '@@PRODUCTS/SAVE';
+
+
+// form Actions
+export const FORM_UPDATE_INFO = '@@FORM/UPDATE/INFO';
+export const FORM_SET_STEP = '@@FORM/SET/STEP';

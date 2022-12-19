@@ -10,48 +10,39 @@ export default {
 export const formBuilder = () => {
   return (
     <>
-    <FormBuilder formSchema={
-      {
+    <FormBuilder formSchema={{
         name: {
           type: 'text',
           label: 'Nombre y apellidos',
           required: true,
         }
-      }
-    } />
+      }} formData={{}} />
     <br />
-    <FormBuilder formSchema={
-      {
+    <FormBuilder formSchema={{
         email: {
           type: "email",
           label: "Correo",
           required: true
         }
-      }
-    } />
+      }} formData={{}} />
     <br />
-    <FormBuilder formSchema={
-      {
+    <FormBuilder formSchema={{
         address: {
           type: "address",
           label: "Dirección del apartamento",
           required: true
         }
-      }
-    } />
+      }} formData={{}} />
     <br />
-    <FormBuilder formSchema={
-      {
+    <FormBuilder formSchema={{
         piso: {
           type: "number",
           label: "Piso",
           required: true
         }
-      }
-    } />
+      }} formData={{}} />
     <br />
-    <FormBuilder formSchema={
-      {
+    <FormBuilder formSchema={{
         bbq: {
           type: "checkbox",
           label: "Zona BBQ",
@@ -67,73 +58,64 @@ export const formBuilder = () => {
           label: "Parque de Juegos",
           required: false
         }
-      }
-    } />
+      }} formData={{}} />
     <br />
-    <FormBuilder formSchema={
-      {
+    <FormBuilder formSchema={{
         parqueadero: {
           type: "select",
           label: "Tipo de parqueadero",
           required: true,
           options: [
-              {
-                  label: "Cubierto",
-                  value: "cubierto"
-              },
-              {
-                  label: "Descubierto",
-                  value: "descubierto"
-              },
-              {
-                  label: "No aplica",
-                  value: "noaplica"
-              }
+            {
+              label: "Cubierto",
+              value: "cubierto"
+            },
+            {
+              label: "Descubierto",
+              value: "descubierto"
+            },
+            {
+              label: "No aplica",
+              value: "noaplica"
+            }
           ]
-      }
-      }
-    } />
+        }
+      }} formData={{}} />
     <br />
-    <FormBuilder formSchema={
-      {
+    <FormBuilder formSchema={{
         monto: {
           type: "number",
           label: "Monto de venta",
           required: true
         }
-      }
-    } />
+      }} formData={{}} />
     <br />
-    <FormBuilder formSchema={
-      {
+    <FormBuilder formSchema={{
         foto: {
           type: "image",
           label: "Foto del inmueble",
           accept: "image/*",
           required: true
         }
-      }
-    } />
+      }} formData={{}} />
     <br />
-    <FormBuilder formSchema={
-      {
+    <FormBuilder formSchema={{
         ascensor: {
           type: "select",
           label: "Tipo de ascensor",
           required: true,
           options: [
-              {
-                  label: "Ascensor",
-                  value: "ascensor"
-              },
-              {
-                  label: "Sin ascensor",
-                  value: "ascensor"
-              }
+            {
+              label: "Ascensor",
+              value: "ascensor"
+            },
+            {
+              label: "Sin ascensor",
+              value: "ascensor"
+            }
           ]
-      }
-      }
-    } />
+        }
+      }} formData={{}} />
   </>
   );
 };

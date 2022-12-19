@@ -19,7 +19,7 @@
               "apps/stepform/src/favicon.ico",
               "apps/stepform/src/assets"
             ],
-            "styles": ["apps/stepform/src/styles.scss"],
+            "styles": ["apps/stepform/src/styles.scss", "libs/ui/src/main.css"],
             "scripts": [],
             "webpackConfig": "webpack.config.js"
           },
