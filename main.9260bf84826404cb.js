@@ -800,12 +800,11 @@ function SelectField(props) {
       id: name,
       name: name,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("option", {
-        value: "",
-        children: "Choose..."
+        value: ""
       }), options.map((optn, index) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("option", {
         value: optn.value,
         label: optn.label || optn.value
-      }))]
+      }, optn.value))]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(formik__WEBPACK_IMPORTED_MODULE_1__.ErrorMessage, {
       name: name,
       render: msg => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
@@ -863,6 +862,20 @@ function CheckboxField(props) {
     }) : null]
   });
 }
+
+function getBase64(file) {
+  const reader = new FileReader();
+  reader.readAsDataURL(file);
+
+  reader.onload = function () {
+    console.log(reader.result);
+  };
+
+  reader.onerror = function (error) {
+    console.log('Error: ', error);
+  };
+}
+
 function ImageField(props) {
   const {
     name,
@@ -873,7 +886,10 @@ function ImageField(props) {
 
   const handleChange = event => {
     const selectedFile = event.currentTarget.files[0];
-    helpers.setValue(selectedFile);
+    console.log({
+      selectedFile: getBase64(selectedFile)
+    });
+    helpers.setValue(selectedFile.name);
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
@@ -1314,7 +1330,7 @@ function Home({
                   }
                 },
                 children: stepSchema.sectionTitle
-              });
+              }, stepSchema.name);
             })
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_formwizard_formWizard__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -1341,7 +1357,7 @@ function Home({
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_images__WEBPACK_IMPORTED_MODULE_1__.InfoImage, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("p", {
                 children: [title, ":", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("br", {})]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
-                children: wizard.values[keyValue]
+                children: JSON.stringify(wizard.values[keyValue])
               })]
             }, keyValue + i);
           })
